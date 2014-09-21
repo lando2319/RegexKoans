@@ -53,7 +53,7 @@ describe("Repeating Characters", function() {
     
     var thisPatternWorks = /^xy{2,5}z$/;
     
-    var fixThisPattern = /^___$/;
+    var fixThisPattern = /^3.1\d{0,2}$/;
     
     expect( 'xyyyz'   ).toMatch(thisPatternWorks);
     expect( 'xyyz'    ).toMatch(thisPatternWorks);
@@ -68,7 +68,7 @@ describe("Repeating Characters", function() {
   });
   
   it('use {n,} for "at least n" and {,m} for "not more than m" repeated characters', function() {
-    var fixThisPattern = /^___$/;
+    var fixThisPattern = /^a\s{2,99}b$/;
     
     expect( 'a  b' ).toMatch(fixThisPattern);
     expect( 'a                                                                 b' ).toMatch(fixThisPattern);
